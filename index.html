@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テトリスゲーム</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <div class="game-header">
+                <h1>TETRIS</h1>
+            </div>
+            <div class="game-content">
+                <div id="game-board"></div>
+                
+                <div class="side-panel">
+                    <div class="score-container">
+                        <div class="panel-label">スコア</div>
+                        <div id="score">0</div>
+                    </div>
+                    
+                    <div class="next-piece-container">
+                        <div class="panel-label">次のピース</div>
+                        <div id="next-piece" class="next-piece-grid"></div>
+                    </div>
+                    
+                    <div class="level-container">
+                        <div class="panel-label">レベル</div>
+                        <div id="level">1</div>
+                    </div>
+                    
+                    <div class="instructions pc-only">
+                        <div class="panel-label">操作方法</div>
+                        <div class="key-instructions">
+                            <div>←→: 左右移動</div>
+                            <div>↑: 回転</div>
+                            <div>↓: 加速</div>
+                            <div>スペース: ハードドロップ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モバイル用コントロール -->
+            <div class="mobile-controls">
+                <div class="control-row">
+                    <button id="rotate-btn" class="control-btn">回転</button>
+                    <button id="drop-btn" class="control-btn">ドロップ</button>
+                </div>
+                <div class="control-row">
+                    <button id="left-btn" class="control-btn">←</button>
+                    <button id="down-btn" class="control-btn">↓</button>
+                    <button id="right-btn" class="control-btn">→</button>
+                </div>
+            </div>
+            
+            <div id="game-over" class="hidden">
+                <div class="game-over-content">
+                    <h2>GAME OVER</h2>
+                    <div class="final-score">スコア: <span id="final-score">0</span></div>
+                    <button id="restart-button">リスタート</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

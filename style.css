@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.score-container, .next-piece-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-board {
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.I {
+    background-color: cyan;
+}
+
+.O {
+    background-color: yellow;
+}
+
+.T {
+    background-color: purple;
+}
+
+.S {
+    background-color: green;
+}
+
+.Z {
+    background-color: red;
+}
+
+.J {
+    background-color: blue;
+}
+
+.L {
+    background-color: orange;
+}
+
+#next-piece {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1px;
+    margin-top: 10px;
+}
+
+.next-cell {
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+#restart-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
+
+.instructions {
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
+}
